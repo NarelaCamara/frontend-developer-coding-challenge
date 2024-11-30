@@ -6,7 +6,7 @@ Este es mi proyecto para [Aerolab Frontend Developer Coding Challenge](https://g
 
 - **Next.js**: Framework de React para renderizado del lado del servidor y generación de sitios estáticos.
 - **Tailwind CSS**: Framework de utilidades para diseñar interfaces de usuario de manera eficiente.
-- **Material UI**: Biblioteca de componentes para mejorar la experiencia de usuario con componentes predefinidos.
+- **Radix UI**: Biblioteca de componentes para mejorar la experiencia de usuario con componentes predefinidos.
 - **Lucide**: Biblioteca de iconos para mejorar la experiencia de usuario.
 
 ## Características principales
@@ -69,8 +69,9 @@ Este es mi proyecto para [Aerolab Frontend Developer Coding Challenge](https://g
 
 ## Links Útiles
 
-- [Tailwind CSS Components Cheatsheet](https://www.creative-tim.com/twcomponents/cheatsheet): Un recurso completo para consultar clases de Tailwind CSS.
+- [IGDB](https://api-docs.igdb.com/#getting-started): Documentación oficial de IGDB.
+- [Figma](https://www.figma.com/design/3O7BxHFnSSawJeny3lXWkE/Aerolab-Frontend-Developer-Coding-Challenge---Public?node-id=16692-3187&node-type=canvas&t=skwJd4c0PSrsM21k-0): Un recurso para consultar los diseños esperados.
 - [Documentación de Next.js](https://nextjs.org/docs): Documentación oficial de Next.js.
-- [Documentación de Tailwind CSS](https://tailwindcss.com/docs): Documentación oficial de Tailwind CSS.
+- [Tailwind CSS Components Cheatsheet](https://www.creative-tim.com/twcomponents/cheatsheet): Un recurso completo para consultar clases de Tailwind CSS.
+- [Radix UI](https://www.radix-ui.com/themes/docs/overview/getting-started): Documentación oficial de Radix UI.
 - [Lucide](https://lucide.dev/guide/installation): Documentación oficial de lucide.
-- [Material ui](https://mui.com/): Documentación oficial de MUI.
