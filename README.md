@@ -7,6 +7,7 @@ Este es mi proyecto para [Aerolab Frontend Developer Coding Challenge](https://g
 - **Next.js**: Framework de React para renderizado del lado del servidor y generación de sitios estáticos.
 - **Tailwind CSS**: Framework de utilidades para diseñar interfaces de usuario de manera eficiente.
 - **Material UI**: Biblioteca de componentes para mejorar la experiencia de usuario con componentes predefinidos.
+- **Lucide**: Biblioteca de iconos para mejorar la experiencia de usuario.
 
 ## Características principales
 
@@ -71,5 +72,5 @@ Este es mi proyecto para [Aerolab Frontend Developer Coding Challenge](https://g
 - [Tailwind CSS Components Cheatsheet](https://www.creative-tim.com/twcomponents/cheatsheet): Un recurso completo para consultar clases de Tailwind CSS.
 - [Documentación de Next.js](https://nextjs.org/docs): Documentación oficial de Next.js.
 - [Documentación de Tailwind CSS](https://tailwindcss.com/docs): Documentación oficial de Tailwind CSS.
-- [Heroicons](https://heroicons.com/): Íconos gratuitos diseñados para integrarse con Tailwind CSS.
+- [Lucide](https://lucide.dev/guide/installation): Documentación oficial de lucide.
 - [Material ui](https://mui.com/): Documentación oficial de MUI.
