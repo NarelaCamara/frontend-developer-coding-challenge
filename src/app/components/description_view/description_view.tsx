@@ -4,6 +4,7 @@ import React from "react";
 import Item from "../item/item";
 import Notification from "../notification/notification";
 import Genre_rating_release from "../gender_rating_release/gender_rating_release";
+import Medias from "../medias/medias";
 
 const DescriptionView = () => {
   return (
@@ -56,9 +57,9 @@ const DescriptionView = () => {
 
         <div>
           <Heading className="m-2 Heading -2xl text-purple-800">Media</Heading>
-          <Grid columns="4" gap="4" width="auto">
-            {[1, 2, 3, 4, 5, 6].map((e) => (
-              <Item element={"/image.png"} key={e} />
+          <Grid columns="6" gap="6" width="auto">
+            {[1, 2, 3, 4, 5].map((e) => (
+              <Medias element={"/image.png"} key={e} />
             ))}
           </Grid>
         </div>
