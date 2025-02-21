@@ -11,13 +11,13 @@ const Item = ({
   viewTrash?: boolean;
 }) => {
   return (
-    <div className="w-52 bg-pink-400 relative rounded-xl  m-2 ">
+    <div className="w-52 relative rounded-xl">
       <Image
         className="dark:invert rounded-xl"
         src={element}
         alt="Vercel logomark"
-        width={250}
-        height={250}
+        width={170}
+        height={226}
       />
       {viewTrash && (
         <div className="absolute bottom-0 right-0 pb-3 pr-3">
