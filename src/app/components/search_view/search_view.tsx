@@ -5,7 +5,7 @@ import Item from "../item/item";
 
 const SearchView = () => {
   return (
-    <div className="w-3/4 mx-auto max-w-screen-lg">
+    <div className="">
       <Categories />
       <Grid columns="4" gap="4" width="auto">
         {[

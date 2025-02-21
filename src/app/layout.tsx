@@ -33,7 +33,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex justify-center items-center  bg-orange-200  `}
       >
         <Theme>
-          <div className="bg-white mt-32">
+          <div className="bg-white mt-32 w-3/4 mx-auto max-w-screen-lg">
             <Navigation />
             <Search />
             {children}
