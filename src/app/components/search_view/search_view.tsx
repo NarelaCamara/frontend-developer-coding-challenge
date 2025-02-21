@@ -4,9 +4,9 @@ import ItemList from "../item_list/item_list";
 
 const SearchView = () => {
   return (
-    <div className="">
+    <div className="w-3/4 mx-auto max-w-screen-lg">
       <Categories />
-      <ItemList/>
+      <ItemList />
     </div>
   );
 };
