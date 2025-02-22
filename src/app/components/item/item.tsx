@@ -1,6 +1,8 @@
+"use client";
 import { IconButton } from "@radix-ui/themes";
 import { Trash2 } from "lucide-react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 const Item = ({
@@ -10,8 +12,12 @@ const Item = ({
   element: string;
   viewTrash?: boolean;
 }) => {
+  const router = useRouter();
   return (
-    <div className="w-52 relative rounded-xl">
+    <div
+      className="w-52 relative rounded-xl m-8"
+      onClick={() => router.push("/description", { scroll: false })}
+    >
       <Image
         className="dark:invert rounded-xl"
         src={element}
