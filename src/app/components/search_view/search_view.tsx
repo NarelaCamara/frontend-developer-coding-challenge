@@ -5,7 +5,7 @@ import Item from "../item/item";
 
 const SearchView = () => {
   return (
-    <div className="">
+    <>
       <Categories />
       <Grid columns="4" gap="4" width="auto">
         {[
@@ -15,7 +15,7 @@ const SearchView = () => {
           <Item element={"/image.png"} key={i} viewTrash={false} />
         ))}
       </Grid>
-    </div>
+    </>
   );
 };
 
