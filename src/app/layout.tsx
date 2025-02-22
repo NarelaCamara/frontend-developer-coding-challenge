@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Navigation from "./components/navigation/navigation";
-import Search from "./components/search/search";
 import "@radix-ui/themes/styles.css";
 import { Theme } from "@radix-ui/themes";
 
@@ -35,7 +34,6 @@ export default function RootLayout({
         <Theme>
           <div className="bg-white mt-32 w-3/4 mx-auto max-w-screen-lg">
             <Navigation />
-            <Search />
             {children}
           </div>
         </Theme>
