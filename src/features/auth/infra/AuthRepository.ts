@@ -9,14 +9,10 @@ export function AuthRepository(): IAuthRepository {
   });
 
   const login = async (): Promise<IAuthResult> => {
-    await loginTwitchInstance.post(
+    const resp: IAuthResult = await loginTwitchInstance.post(
       `/token?client_id=${process.env.NEXT_APP_CLIENTE_ID}&client_secret=${process.env.NEXT_APP_SECRET_KEY}&grant_type=client_credentials`
     );
-    return Promise.resolve({
-      access_token: "string",
-      expires_in: 55656,
-      token_type: "string",
-    });
+    return resp;
   };
 
   return { login };
