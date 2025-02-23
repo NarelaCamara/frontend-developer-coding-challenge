@@ -1,4 +1,4 @@
-import SearchView from "./components/search_view/search_view";
+import { SearchView } from "@/components";
 
 export default function Home() {
   return (

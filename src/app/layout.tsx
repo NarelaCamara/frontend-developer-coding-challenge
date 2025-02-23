@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Navigation from "./components/navigation/navigation";
 import "@radix-ui/themes/styles.css";
 import { Theme } from "@radix-ui/themes";
+import { Navigation } from "@/components";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",

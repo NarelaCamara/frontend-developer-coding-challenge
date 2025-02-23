@@ -1,4 +1,4 @@
-import DescriptionView from "@/app/components/description_view/description_view";
+import { DescriptionView } from "@/components";
 import React from "react";
 
 export default function Description() {
