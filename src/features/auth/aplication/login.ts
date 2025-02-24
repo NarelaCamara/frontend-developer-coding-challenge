@@ -1,8 +1,13 @@
 import { IAuthRepository } from "../domain/IAuthRepository";
 import { IAuthResult } from "../domain/IAuthResult";
+import { AuthRepository } from "../infra/AuthRepository";
 
-export function login(AuthRepository: IAuthRepository) {
-  return async (): Promise<IAuthResult> => {
-    return await AuthRepository.login();
-  };
+export function loginRepository(
+  AuthRepository: IAuthRepository
+): Promise<IAuthResult> {
+  return AuthRepository.login();
+}
+
+export function login() {
+  return loginRepository(AuthRepository());
 }
