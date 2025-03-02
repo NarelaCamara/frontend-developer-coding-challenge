@@ -1,6 +1,9 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import axios from "axios";
 import { IGamesRepository } from "../domain/IGamesRepository";
 import { IGamesResult } from "../domain/IGamesResult";
+import { Game } from "./Game";
+import { Status } from "@/utils/utils";
 
 export function GamesRepository(): IGamesRepository {
   const gamesInstance = axios.create({
@@ -9,13 +12,29 @@ export function GamesRepository(): IGamesRepository {
   });
 
   const getGames = async (accessToken: string): Promise<IGamesResult> => {
-    const { data } = await gamesInstance.post(`/games`, "fields *;", {
-      headers: {
-        "Client-ID": process.env.NEXT_PUBLIC_CLIENTE_ID,
-        Authorization: `Bearer ${accessToken}`,
-      },
-    });
-    return data;
+    try {
+      const { data } = await gamesInstance.post(
+        `/games`,
+        "fields screenshots.*;",
+        {
+          headers: {
+            "Client-ID": process.env.NEXT_PUBLIC_CLIENTE_ID,
+            Authorization: `Bearer ${accessToken}`,
+          },
+        }
+      );
+
+      return {
+        game: data.map((e: any) => Game(e)),
+        status: Status.Sucess,
+      };
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    } catch (error: any) {
+      return {
+        game: [],
+        status: Status.Error,
+      };
+    }
   };
 
   return { getGames };
