@@ -19,7 +19,7 @@ const Item = ({
       onClick={() => router.push("/description", { scroll: false })}
     >
       <Image
-        className="dark:invert rounded-xl"
+        className="  rounded-xl"
         src={element}
         alt="Vercel logomark"
         width={170}

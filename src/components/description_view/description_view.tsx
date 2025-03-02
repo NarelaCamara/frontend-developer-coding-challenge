@@ -13,7 +13,7 @@ const DescriptionView = () => {
 
       <div>
         <Image
-          className="dark:invert rounded-xl"
+          className="  rounded-xl"
           src={"/image.png"}
           alt="Vercel logomark"
           width={150}

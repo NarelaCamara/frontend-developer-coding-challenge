@@ -5,7 +5,7 @@ const Medias = ({ element }: { element: string }) => {
   return (
     <div className="">
       <Image
-        className="dark:invert rounded-xl"
+        className="  rounded-xl"
         src={element}
         alt="Vercel logomark"
         width={132}
