@@ -1,5 +1,7 @@
+import { Status } from "@/utils/utils";
+import { IGame } from "./IGame";
+
 export interface IGamesResult {
-  access_token: string;
-  expires_in: number;
-  token_type: string;
+  game: Array<IGame>;
+  status: Status;
 }
