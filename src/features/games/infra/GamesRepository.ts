@@ -13,12 +13,16 @@ export function GamesRepository(): IGamesRepository {
 
   const getGames = async (accessToken: string): Promise<IGamesResult> => {
     try {
-      const { data } = await gamesInstance.post(`/games`, "fields cover.*;", {
-        headers: {
-          "Client-ID": process.env.NEXT_PUBLIC_CLIENTE_ID,
-          Authorization: `Bearer ${accessToken}`,
-        },
-      });
+      const { data } = await gamesInstance.post(
+        `/games`,
+        "fields cover.*; fields platforms.*;  fields genres.*;fields release_dates.*;",
+        {
+          headers: {
+            "Client-ID": process.env.NEXT_PUBLIC_CLIENTE_ID,
+            Authorization: `Bearer ${accessToken}`,
+          },
+        }
+      );
 
       return {
         game: data.map((e: any) => Game(e)),
