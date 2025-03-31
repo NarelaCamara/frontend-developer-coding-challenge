@@ -25,7 +25,8 @@ const Navigation = () => {
         </div>
       )}
 
-      <div className="flex flex-row justify-between w-2/3">
+      <div className="flex flex-row-reverse justify-between w-2/3">
+        <Search />
         {path !== "/" && (
           <h2
             onClick={() => router.back()}
@@ -34,7 +35,6 @@ const Navigation = () => {
             <ArrowLeft height="20" width="20" /> Back
           </h2>
         )}
-        <Search />
       </div>
     </div>
   );
