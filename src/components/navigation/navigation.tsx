@@ -7,9 +7,9 @@ import { usePathname, useRouter } from "next/navigation";
 
 const Navigation = () => {
   const router = useRouter();
-  const {} =  usePathname()
+  const path = usePathname();
 
-  console.log(router);
+  console.log(router, path);
   return (
     <div>
       <div className="grid grid-rows-1 items-center justify-items-center">
@@ -25,15 +25,17 @@ const Navigation = () => {
           }
         </div>
       </div>
-      <div>
-        <h2
-          onClick={() => router.back()}
-          className="text-base p-4 font-bold text-purple-800 flex flex-row items-center"
-        >
-          <ArrowLeft height="20" width="20" /> Back
-        </h2>
-        <Search />
-      </div>
+      {path !== "/" && (
+        <div>
+          <h2
+            onClick={() => router.back()}
+            className="text-base p-4 font-bold text-purple-800 flex flex-row items-center"
+          >
+            <ArrowLeft height="20" width="20" /> Back
+          </h2>
+          <Search />
+        </div>
+      )}
     </div>
   );
 };
