@@ -10,8 +10,6 @@ export default function Home() {
   const [games, setGames] = useState<Array<IGame>>([]);
   const [status_game, setStatus_game] = useState<Status>(Status.Loading);
 
-  console.log("status_game", status_game);
-
   useEffect(() => {
     const respLogin = async () => {
       const resp = await login();
@@ -26,16 +24,25 @@ export default function Home() {
 
   return (
     <>
-      <Categories />
-      {status_game === Status.Sucess && (
-        <Grid columns="4" gap="4" width="auto">
-          {games.map((e) => (
-            <Item element={e.image} key={e.id} viewTrash={true} />
-          ))}
-        </Grid>
-      )}
-      {status_game === Status.Error && <div>Error</div>}
-      {status_game === Status.Loading && <div>...cargando</div>}
+      <div className="flex flex-col justify-center content-center items-center">
+        <h2 className="text-base p-4 font-bold text-purple-800 ">
+          Saved games
+        </h2>
+      </div>
+      <div className="sticky top-10 z-40 bg-white">
+        <Categories />
+      </div>
+      <div className="">
+        {status_game === Status.Sucess && (
+          <Grid columns="4" gap="4" width="auto">
+            {games.map((e) => (
+              <Item element={e.image} key={e.id} viewTrash={true} />
+            ))}
+          </Grid>
+        )}
+        {status_game === Status.Error && <div>Error</div>}
+        {status_game === Status.Loading && <div>...cargando</div>}
+      </div>
     </>
   );
 }
