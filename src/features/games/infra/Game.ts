@@ -7,5 +7,6 @@ export const Game = (json: any): IGame => {
   return {
     id: json.id || "sin información",
     image: `https://images.igdb.com/igdb/image/upload/t_${size}/${image}.jpg`,
+    name: json.name,
   };
 };

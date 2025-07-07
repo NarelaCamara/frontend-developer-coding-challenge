@@ -15,7 +15,7 @@ export default function Home() {
       const resp = await login();
       const resp_games = await getGames(resp.access_token);
       console.log("resp_games", resp_games);
-      setGames(resp_games.game);
+      setGames(resp_games.games);
       setStatus_game(resp_games.status);
     };
 

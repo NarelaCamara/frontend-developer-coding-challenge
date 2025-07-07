@@ -15,7 +15,7 @@ export function GamesRepository(): IGamesRepository {
     try {
       const { data } = await gamesInstance.post(
         `/games`,
-        "fields cover.*; fields platforms.*;  fields genres.*;fields release_dates.*;",
+        "fields cover.*; fields platforms.*;  fields genres.*;fields name;",
         {
           headers: {
             "Client-ID": process.env.NEXT_PUBLIC_CLIENTE_ID,
@@ -25,13 +25,13 @@ export function GamesRepository(): IGamesRepository {
       );
 
       return {
-        game: data.map((e: any) => Game(e)),
+        games: data.map((e: any) => Game(e)),
         status: Status.Sucess,
       };
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error: any) {
       return {
-        game: [],
+        games: [],
         status: Status.Error,
       };
     }
